@@ -1,0 +1,22 @@
+# Environment
+.env
+.venv/
+
+# Database
+audit.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Screenshots (generated at runtime)
+screenshots/*.png
+
+# OS
+.DS_Store

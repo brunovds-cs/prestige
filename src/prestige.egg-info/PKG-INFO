@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: prestige
+Version: 0.1.0
+Summary: Insurance claim PDF intake to web form automation pipeline
+Requires-Python: >=3.12
+Requires-Dist: pypdf>=4.0
+Requires-Dist: anthropic>=0.40
+Requires-Dist: playwright>=1.48
+Requires-Dist: pydantic>=2.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0; extra == "dev"

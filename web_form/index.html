@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Claim Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 520px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1 { font-size: 1.4rem; }
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 24px;
+            cursor: pointer;
+        }
+        #confirmation {
+            display: none;
+            margin-top: 20px;
+            padding: 16px;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insurance Claim Submission</h1>
+    <form id="claim-form">
+        <label for="policyholder_name">Policyholder Name</label>
+        <input type="text" id="policyholder_name" name="policyholder_name" required>
+
+        <label for="policy_number">Policy Number</label>
+        <input type="text" id="policy_number" name="policy_number" required>
+
+        <label for="claim_amount">Claim Amount ($)</label>
+        <input type="text" id="claim_amount" name="claim_amount" placeholder="e.g. 12500.00" required>
+
+        <label for="incident_date">Incident Date</label>
+        <input type="text" id="incident_date" name="incident_date" placeholder="YYYY-MM-DD" required>
+
+        <button type="submit" id="submit-btn">Submit Claim</button>
+    </form>
+
+    <div id="confirmation">Claim submitted successfully.</div>
+
+    <script>
+        document.getElementById("claim-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            document.getElementById("confirmation").style.display = "block";
+        });
+    </script>
+</body>
+</html>

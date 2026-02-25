@@ -1,0 +1,20 @@
+[project]
+name = "prestige"
+version = "0.1.0"
+description = "Insurance claim PDF intake to web form automation pipeline"
+requires-python = ">=3.12"
+dependencies = [
+    "pymupdf>=1.24",
+    "anthropic>=0.40",
+    "playwright>=1.48",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
